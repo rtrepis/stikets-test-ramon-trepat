@@ -1,0 +1,29 @@
+@use "../variables/colors";
+
+.header {
+  display: flex;
+  height: 74px;
+  justify-self: center;
+
+  &__sidebar {
+    width: 200px;
+    text-align: center;
+    background: colors.$white-light;
+    padding: 15px;
+  }
+
+  &__container {
+    flex: 1;
+    background: colors.$white;
+    padding: 30px 26px 0px 20px;
+    color: colors.$dark-light;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+}
+
+.logo {
+  &--sidebar {
+    display: inline;
+  }
+}
