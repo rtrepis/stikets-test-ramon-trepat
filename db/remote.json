@@ -1,0 +1,10 @@
+[
+	{
+		"user": "usuari1@stikets.es",
+		"password": "123456"
+	},
+	{
+		"user": "usuari2@stikets.es",
+		"password": "654321"
+	}
+]
