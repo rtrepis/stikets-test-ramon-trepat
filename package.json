@@ -4,6 +4,8 @@
   "description": "Maquetació",
   "main": "index.js",
   "scripts": {
+    "build": "sass scss/index.scss css/styled.css",
+    "start": "sass --watch scss/index.scss css/styled.css",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install"
   },
@@ -20,5 +22,8 @@
   "homepage": "https://github.com/rtrepis/stikets-test-ramon-trepat#readme",
   "devDependencies": {
     "husky": "^8.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.55.0"
   }
 }
