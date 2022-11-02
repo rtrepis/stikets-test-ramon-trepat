@@ -1,0 +1,30 @@
+@use "../variables/colors";
+
+.main {
+  display: flex;
+  height: 350px;
+  justify-self: center;
+
+  &__sidebar {
+    width: 200px;
+    background: colors.$dark;
+    list-style: none;
+    padding-left: 0;
+    color: colors.$dark-light;
+    font-weight: 600;
+    border: 1px colors.$dark-hard solid;
+
+    &--selected {
+      background: colors.$dark-hard;
+      padding: 10px 0px 10px 30px;
+    }
+  }
+
+  &__container {
+    flex: 1;
+    background: colors.$white-dark;
+    color: colors.$dark;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+}
