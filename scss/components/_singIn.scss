@@ -1,0 +1,53 @@
+@use "../variables/colors";
+
+.form {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 20px;
+  }
+
+  &__row:first-child {
+    padding-top: 30px;
+  }
+
+  &__row:last-child {
+    padding-top: 25px;
+  }
+}
+
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__input {
+    width: 240px;
+    height: 40px;
+    border-radius: 5px;
+    border-top: 2px colors.$dark-light solid;
+    border-bottom: 1px colors.$dark-light solid;
+    border-left: 1px colors.$dark-light solid;
+    border-right: 1px colors.$dark-light solid;
+    padding-left: 10px;
+  }
+}
+
+.keep {
+  width: 20px;
+  height: 20px;
+  border: 1px colors.$dark-light solid;
+  margin-right: 10px;
+
+  &__description {
+    color: colors.$dark-light;
+    font-weight: 600;
+  }
+}

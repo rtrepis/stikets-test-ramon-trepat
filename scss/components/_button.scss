@@ -1,0 +1,14 @@
+@use "../variables/colors";
+
+.custom-button {
+  background-color: colors.$primary;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+
+  color: colors.$white;
+
+  &:active {
+    background-color: colors.$primary-dark;
+  }
+}
