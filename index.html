@@ -6,14 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign in</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
     <link rel="stylesheet" href="css/styled.css" />
-
-    <script>
-      const handlerOnSubmit = () => {
-        window.location.replace("http://www.stikets.es");
-      };
-    </script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   </head>
+  <script>
+    $(function () {
+      $("#dialog").dialog({
+        modal: true,
+        draggable: false,
+        resizable: false,
+        autoOpen: false,
+        height: 100,
+        minWidth: 320,
+        show: {
+          effect: "Fade",
+          duration: 500,
+        },
+        hide: {
+          effect: "Fade",
+          duration: 500,
+        },
+        dialogClass: "no-close modal-success",
+      });
+
+      $(".ui-dialog-titlebar").hide();
+
+      $("#handleSignIn").click(function (event) {
+        $("#dialog").dialog("open");
+        setTimeout(pageToHome, 5000);
+      });
+    });
+
+    const pageToHome = () => {
+      window.location.replace("http://www.stikets.es");
+    };
+  </script>
   <body>
     <div class="window">
       <div class="header">
@@ -32,7 +68,7 @@
         <ul class="main__sidebar">
           <li class="main__sidebar--selected">LOGIN</li>
         </ul>
-        <from id="signIn" submit="ha" class="main__container">
+        <from class="main__container">
           <div class="form__row">
             <div class="email">
               <label for="email" class="email__title">E-mail address:</label>
@@ -55,9 +91,21 @@
             >
           </div>
           <div class="form__row">
-            <button type="submit" class="custom-button">SIGN IN</button>
+            <input
+              type="submit"
+              class="custom-button"
+              id="handleSignIn"
+              name="handleSignIn"
+              value="SIGN IN"
+            />
           </div>
         </from>
+      </div>
+    </div>
+    <div id="dialog">
+      <p>Les dades són correctes, Benvingut.</p>
+      <div class="cv-spinner">
+        <span class="spinner"></span>
       </div>
     </div>
   </body>
