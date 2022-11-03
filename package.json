@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "jquery": "^3.6.1",
+    "jquery-validation": "^1.19.5",
     "sass": "^1.55.0"
   }
 }
