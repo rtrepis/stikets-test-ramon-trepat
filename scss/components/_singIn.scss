@@ -4,7 +4,7 @@
   &__row {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex;
     padding-top: 15px;
     padding-left: 20px;
   }
@@ -37,6 +37,10 @@
     border-left: 1px colors.$dark-light solid;
     border-right: 1px colors.$dark-light solid;
     padding-left: 10px;
+  }
+
+  &__error {
+    color: colors.$danger;
   }
 }
 
