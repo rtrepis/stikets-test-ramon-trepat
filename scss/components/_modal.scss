@@ -6,6 +6,12 @@
   color: colors.$dark-light;
 }
 
+.ui-widget-content.modal-error {
+  background: colors.$white-dark;
+  border: 2px solid colors.$danger;
+  color: colors.$dark-light;
+}
+
 .cv-spinner {
   display: flex;
   justify-content: center;
